@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 25.0.1706.13
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35514.174 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevilStudio", "DevilStudio\DevilStudio.csproj", "{A03BAD82-98A4-4228-92AE-A96E1669540D}"
 EndProject
@@ -15,6 +15,7 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A03BAD82-98A4-4228-92AE-A96E1669540D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A03BAD82-98A4-4228-92AE-A96E1669540D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A03BAD82-98A4-4228-92AE-A96E1669540D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{A03BAD82-98A4-4228-92AE-A96E1669540D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A03BAD82-98A4-4228-92AE-A96E1669540D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{90ADF727-A676-43F5-868F-1E58B2162E5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
