@@ -17,6 +17,7 @@ namespace ModelManager.Service.CloudServices
 {
     public class AWSCloudServices
     {
+       
         public class AWSAccount
         {
             public string? UserEmail { get; set; }
