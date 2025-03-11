@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
-
+using CommunityToolkit.Maui;
 
 namespace DevilStudio;
 
@@ -10,6 +10,7 @@ public static class MauiProgram
         var builder = MauiApp.CreateBuilder();
         builder
             .UseMauiApp<App>()
+            .UseMauiCommunityToolkit()
            // 🔥 Add this line
             .ConfigureFonts(fonts =>
             {

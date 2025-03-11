@@ -10,7 +10,7 @@ using System.Text;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using Xamarin.Essentials;
+
 using static ModelManager.Service.CloudServices.AWSCloudServices;
 
 namespace ModelManager.Service.CloudServices
