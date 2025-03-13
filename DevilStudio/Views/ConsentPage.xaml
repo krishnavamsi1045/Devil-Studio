@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DevilStudio.Views.ConsentPage">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Grid.Column="1"
+       x:Name="MessageLabel"
+       Text=""
+       Margin="10,0,0,0" 
+       FontSize="15"
+       FontAttributes="Bold"
+       HorizontalOptions="CenterAndExpand"
+       VerticalOptions="Center"
+       IsVisible="False"/>
+
+            <!-- Title -->
+            <Label Text="User Consent" 
+                   FontSize="24" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center" 
+                   Margin="0,10,0,20"
+                   TextColor="{AppThemeBinding Light=Black, Dark=White}"/>
+
+            <HorizontalStackLayout VerticalOptions="Center">
+                <Label Text="*"
+                       FontSize="16"
+                       Margin="200,0,0,0"
+                       TextColor="Red"/>
+                <Label Text="We collect cookies for the functioning of our website and to give you the best experience. This includes some essential cookies." 
+                       FontSize="16" 
+                       Margin="0,0,200,0"                       
+                       TextColor="{AppThemeBinding Light=Black, Dark=White}"
+                          />
+            </HorizontalStackLayout>
+
+            <!-- Permissions Section -->
+            <Frame BorderColor="{AppThemeBinding Light=Gray, Dark=White}" BackgroundColor="{AppThemeBinding Light=White, Dark=Black}"  CornerRadius="10" Padding="15" HorizontalOptions="FillAndExpand" Margin="200,0,200,0">
+                <VerticalStackLayout Spacing="10">
+
+                    <!-- Option 1 -->
+                    <Grid ColumnDefinitions="Auto,*" VerticalOptions="Center">
+                        <CheckBox x:Name="CheckBox" CheckedChanged="OnAgreementCheckedChanged" VerticalOptions="Start" />
+                        <Label Grid.Column="1" TextColor="{AppThemeBinding Light=Black, Dark=White}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <!-- Regular text -->
+                                    <Span Text="Cookies from third parties which may be used for personalization and determining your location. By clicking 'I Accept', you agree to the use of cookies to enhance your personalized experience on our site. For more details, you can refer to our " 
+                                          FontSize="16" />
+                                    <!-- Hyperlink text -->
+                                    <Span Text="cookie policy" 
+                                          FontSize="16" 
+                                          TextColor="Blue" >
+                                        <Span.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding OpenCookiePolicyCommand}" />
+                                        </Span.GestureRecognizers>
+                                    </Span>
+                                    <Span Text="." FontSize="16" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </Grid>
+
+
+                    <!-- Option 2 -->
+                    <Grid ColumnDefinitions="Auto,*" Margin="0,20,0,0" VerticalOptions="Center">
+                        <!-- CheckBox -->
+                        <CheckBox x:Name="AgreementCheckBox" 
+                                    CheckedChanged="OnAgreementCheckedChanged" 
+                                    VerticalOptions="Start" />
+
+                        <!-- Label with FormattedText -->
+                        <Label Grid.Column="1" TextColor="{AppThemeBinding Light=Black, Dark=White}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <!-- Regular Text -->
+                                    <Span Text="*" 
+                                            FontSize="16" 
+                                            TextColor="Red" />
+                                    <Span Text="I agree to the updated " 
+                                            FontSize="16"                                          
+                                          />
+                                    <!-- Hyperlink for Privacy Policy -->
+                                    <Span Text="privacy policy" 
+                                          FontSize="16" 
+                                          TextColor="Blue">
+                                        <Span.GestureRecognizers>
+                                            <TapGestureRecognizer 
+                                    Command="{Binding OpenPrivacyPolicyCommand}" 
+                                    CommandParameter="https://gamanasolutions.com/privacy-policy/" />
+                                        </Span.GestureRecognizers>
+                                    </Span>
+
+
+                                    <!-- Regular Text -->
+                                    <Span Text=" and I warrant that I am above 16 years of age." 
+                                          FontSize="16"
+                                          />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </Grid>
+
+
+                    <!-- Option 3 -->
+                    <Grid ColumnDefinitions="Auto,*" Margin="0,20,0,0" VerticalOptions="Center">
+                        <CheckBox x:Name="CheckBox1" CheckedChanged="OnAgreementCheckedChanged" VerticalOptions="Start" />
+                        <Label Grid.Column="1" TextColor="{AppThemeBinding Light=Black, Dark=White}"
+                   Text="I agree to the processing of my personal data for the purpose of personalized recommendations on financial and similar products offered by MoneyControl." 
+                   FontSize="16" 
+                   LineBreakMode="WordWrap"
+                   HorizontalOptions="FillAndExpand" 
+                  />
+                    </Grid>
+
+                    <!-- Option 4 -->
+                    <Grid ColumnDefinitions="Auto,*" Margin="0,20,0,0" VerticalOptions="Center">
+                        <CheckBox x:Name="CheckBox2" CheckedChanged="OnAgreementCheckedChanged" VerticalOptions="Start" />
+                        <Label Grid.Column="1"
+                   Text="I agree personalized advertisements and any kind of marketing/retargeting on other third party websites." 
+                   FontSize="16" 
+                   LineBreakMode="WordWrap"  TextColor="{AppThemeBinding Light=Black, Dark=White}"
+                   HorizontalOptions="FillAndExpand" 
+                    />
+                    </Grid>
+
+                    <!-- Option 5 -->
+                    <Grid ColumnDefinitions="Auto,*" Margin="0,20,0,0" VerticalOptions="Center">
+                        <CheckBox x:Name="CheckBox3" CheckedChanged="OnAgreementCheckedChanged" VerticalOptions="Start" />
+                        <Label Grid.Column="1"  TextColor="{AppThemeBinding Light=Black, Dark=White}"
+                   Text="I  agree  to  recieve  direct  marketing communications via Emails and SMS." 
+                   FontSize="16" 
+                   LineBreakMode="WordWrap"
+                   HorizontalOptions="FillAndExpand" 
+                   />
+                    </Grid>
+
+                </VerticalStackLayout>
+            </Frame>
+            <!-- Buttons -->
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="20" Margin="0,30,0,0">
+                <Button x:Name="AcceptButton"
+                        Text="I Accept"
+                        BackgroundColor="LawnGreen" 
+                        TextColor="White" 
+                        IsEnabled="False"                        
+                        Clicked="OnAcceptClicked" />
+
+                <!--<Button x:Name="TakeSubscriptionsButton"
+                        Text="Take Subscriptions"
+                        BackgroundColor="Red" 
+                        TextColor="White" 
+                        Clicked="TakeSubscriptions"
+                        IsVisible="True" />-->
+
+                <Button 
+                        Text="Decline"
+                        BackgroundColor="Orange" 
+                        TextColor="White" 
+                        Clicked="OnDecline"
+                        IsVisible="True" />
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -3,14 +3,47 @@
     x:Class="DevilStudio.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:DevilStudio"
+    xmlns:local="clr-namespace:DevilStudio.Views"
+    xmlns:local1="clr-namespace:DevilStudio"
     Shell.FlyoutBehavior="Disabled"
-    Title="DevilStudio">
+    Title="DevilStudio" BackgroundColor="#120741" Shell.TitleColor="White">
 
+
+
+    <!-- Toolbar items for the header -->
+    <Shell.ToolbarItems>
+         <ToolbarItem x:Name="WelcomeToolbarItem" Text="{Binding WelcomeText}" Clicked="Profile_Clicked" Order="Primary" />
+        <ToolbarItem x:Name="ProviderLogoToolbarItem" IconImageSource="{Binding ProviderLogo}" Order="Primary" />
+        <ToolbarItem Text="Update Profile" x:Name="UpdateProfileToolbarItem" IconImageSource="updateprofile.png" Clicked="UpdateProfile" Order="Primary" />
+        <ToolbarItem Text="Log Out" x:Name="LogoutToolbarItem" IconImageSource="logout.png" Clicked="Logout_Clicked" Order="Primary" />
+        <ToolbarItem Text="Home" x:Name="HomeToolbarItem"  IconImageSource="home.png" Clicked="Home_Clicked" Order="Primary" />
+    </Shell.ToolbarItems>
+
+    <!-- Define the content pages -->
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+            Title="SignUp"
+            ContentTemplate="{DataTemplate local:SignUp}"
+            Route="SignUp"
+            Shell.NavBarIsVisible="False"/>
+    <ShellContent
+            Title="Home"
+            ContentTemplate="{DataTemplate local1:MainPage}"
+            Shell.NavBarIsVisible="False"
+            Route="MainPage" />
+    <ShellContent
+             Title="Details"
+             ContentTemplate="{DataTemplate local:Detailspage}"
+             Route="Detailspage" />
+    <!--<ShellContent
+            Title="CreateObject"
+            ContentTemplate="{DataTemplate local:CreateObjectpage}"
+            Route="CreateObjectpage" />
+    <ShellContent
+                Title="Object Manager"
+                ContentTemplate="{DataTemplate local:ObjectManager}"
+                Route="ObjectManager" />
+    <ShellContent
+             Title="Updateobjectmanager"
+             ContentTemplate="{DataTemplate local:Updateobjectmanager}"
+             Route="Updateobjectmanager" />-->
 </Shell>
-

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DevilStudio.Views.SplashPage">
+
+    <StackLayout Margin="20">
+        <Image Source="devilstudio_logo.png" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+        <Label Text="Devil Studio (Beta Release )" HorizontalOptions="Center" FontSize="Small" VerticalOptions="End" TextColor="Gray"/>
+        <Label x:Name="BuildVersionLabel" Text="Version: Loading..." HorizontalOptions="Center" FontSize="Small" VerticalOptions="End" TextColor="Gray"/>
+        <Label Text="Copyright © 2024 Gamana Solutions." HorizontalOptions="Center" FontSize="Small" VerticalOptions="End" TextColor="Gray"/>
+        <Label Text="All rights reserved." HorizontalOptions="Center" FontSize="Small" TextColor="Gray"/>
+    </StackLayout>
+
+</ContentPage>

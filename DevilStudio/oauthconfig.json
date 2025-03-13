@@ -1,0 +1,26 @@
+{
+  "GitHub": {
+    "ClientId": "Ov23liWKy0Asob1OIJdN",
+    "ClientSecret": "5a0a3e61afad6d943262ff6c38afae3e06a32718"
+  },
+  "Google": {
+    "ClientId": "589617542700-qg987v78ijnn4jd9a1c5bd49k9hrsmts.apps.googleusercontent.com",
+    "ClientSecret": "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"
+  },
+  "YouTube": {
+    "ClientId": "589617542700-qg987v78ijnn4jd9a1c5bd49k9hrsmts.apps.googleusercontent.com",
+    "ClientSecret": "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"
+  },
+  "Facebook": {
+    "AppId": "392670257190063",
+    "AppSecret": "be38c5d0d2b308c9209624dd0c3cd714"
+  },
+  "Instagram": {
+    "AppId": "1052886072891924",
+    "AppSecret": "3f2b6075e263cc279e7c9bc78df52093"
+  },
+  "LinkedIn": {
+    "ClientId": "77nm0h5n1liqr1",
+    "ClientSecret": "q45t4xzCjOnTANM7"
+  }
+}

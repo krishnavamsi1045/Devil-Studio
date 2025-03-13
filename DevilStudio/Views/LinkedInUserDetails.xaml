@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DevilStudio.Views.LinkedInUserDetails"
+                       BackgroundColor="{AppThemeBinding Light=White, Dark=Black}">
+    <ScrollView>
+        <VerticalStackLayout 
+        Spacing="10"
+        Padding="20"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        WidthRequest="300">
+
+            <Label Text="Add Your Details" 
+               FontSize="24" 
+               HorizontalOptions="Center"
+               TextColor="{AppThemeBinding Light=Black, Dark=White}"/>
+
+            <!-- Username -->
+            <Label Text="Username:" FontAttributes="Bold" TextColor="{AppThemeBinding Light=Black, Dark=White}"/>
+            <Entry x:Name="UsernameEntry"
+               Placeholder="Username"
+               TextColor="{AppThemeBinding Light=Black, Dark=White}" 
+               PlaceholderColor="{AppThemeBinding Light=Gray, Dark=LightGray}"
+               BackgroundColor="Transparent"/>
+
+            <!-- Email -->
+            <Label Text="Email:" FontAttributes="Bold" TextColor="{AppThemeBinding Light=Black, Dark=White}"/>
+            <Entry x:Name="EmailEntry" 
+               IsReadOnly="True" 
+               Placeholder="Email"
+               TextColor="{AppThemeBinding Light=Black, Dark=White}"
+               PlaceholderColor="{AppThemeBinding Light=Gray, Dark=LightGray}"
+               BackgroundColor="Transparent"/>
+
+            <!-- Firstname -->
+            <Label Text="First Name:" FontAttributes="Bold" TextColor="{AppThemeBinding Light=Black, Dark=White}"/>
+            <Entry x:Name="FirstnameEntry" 
+               Placeholder="First Name"
+               TextColor="{AppThemeBinding Light=Black, Dark=White}"
+               PlaceholderColor="{AppThemeBinding Light=Gray, Dark=LightGray}"
+               BackgroundColor="Transparent"/>
+
+            <!-- Lastname -->
+            <Label Text="Last Name:" FontAttributes="Bold"  TextColor="{AppThemeBinding Light=Black, Dark=White}"/>
+            <Entry x:Name="LastnameEntry"
+               Placeholder="Last Name"
+                TextColor="{AppThemeBinding Light=Black, Dark=White}"
+               PlaceholderColor="{AppThemeBinding Light=Gray, Dark=LightGray}"
+                BackgroundColor="Transparent"/>
+
+            <!-- Address Field (Dropdown for Country Selection) -->
+            <!--<Label Text="Address" FontSize="Medium" />
+            <Picker x:Name="CountryPicker" Title="Select Country" SelectedIndexChanged="OnCountryChanged" />-->
+
+            <!-- Mobile Number -->
+            <!--<Grid ColumnSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Picker x:Name="CountryCodePicker" Grid.Column="0" HeightRequest="65"
+                Title="Country Code"  VerticalOptions="Center"  WidthRequest="120"
+                SelectedIndexChanged="OnCountryCodeChanged" TextColor="{AppThemeBinding Light=Black, Dark=White}"/>
+                <Entry x:Name="MobileNumberEntry" Placeholder="Mobile Number" 
+               Grid.Column="1" Keyboard="Telephone"  VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,20,0,0" HeightRequest="10" TextColor="{AppThemeBinding Light=Black, Dark=White}"
+                    PlaceholderColor="{AppThemeBinding Light=Gray, Dark=LightGray}"  BackgroundColor="Transparent"/>
+            </Grid>-->
+            <!--<Label x:Name="MobileNumberErrorLabel" 
+               TextColor="Red" 
+               IsVisible="False"/>-->
+
+            <!-- Submit Button -->
+            <Button Text="Submit" 
+                Clicked = "OnSubmitButtonClicked"
+                 TextColor="{AppThemeBinding Light=White, Dark=Black}"
+                BackgroundColor="{AppThemeBinding Light=Blue, Dark=Gray}"/>
+            <!--<Button Text="Skip" 
+     Clicked="OnSkip"/>-->
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

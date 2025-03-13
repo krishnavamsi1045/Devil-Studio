@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DevilStudio.Views.BeforeSignupprivacypolicy"
+             Title="">
+    <ScrollView>
+        <VerticalStackLayout Padding="100,0,100,50">
+            <!-- Title of the page -->
+            <Button Text="Back" HorizontalOptions="Start" Clicked="Back"></Button>
+            <Label Text="Privacy Policy"
+                 FontSize="24"
+                 FontAttributes="Bold"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Start" />
+
+            <!-- Privacy Policy Content -->
+
+            <Label Text="For EU, UK, and California Residents"
+                 FontSize="18"
+                 FontAttributes="Bold"
+                 Padding="0,10,0,5"
+                 VerticalOptions="Start"
+                 HorizontalOptions="Start" />
+
+            <Label Text="Gamana Solutions LLP ('we,' 'us,' 'our') is committed to protecting your privacy as a user ('you,' 'your') of our website and services ('Services'). This Privacy Policy ('Policy') outlines how we collect, use, disclose, and protect your personal and non-personal information. By accessing or using our Services, you agree to the terms of this Policy. We reserve the right to modify this Policy at any time and recommend reviewing it periodically."
+                 FontSize="16"
+                 VerticalOptions="Start"
+                 HorizontalOptions="Start"
+                 LineBreakMode="WordWrap" />
+            <Label Text="This Policy complies with the Information Technology Act, 2000, and the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011."
+          FontSize="16"
+          VerticalOptions="Start"
+          HorizontalOptions="Start"
+           Padding="0,10,0,5"
+          LineBreakMode="WordWrap" />
+
+            <Label Text="Collection of Information" 
+                 FontSize="18"
+                 FontAttributes="Bold"
+                 VerticalOptions="Start"
+                  Padding="0,10,0,5"
+                 HorizontalOptions="Start" />
+
+            <Label Text="1. Personal Information" 
+                 FontSize="16"
+                 VerticalOptions="Start"
+                 FontAttributes="Bold"
+                 Padding="0,0,0,3"
+                 HorizontalOptions="Start" />
+
+            <Label Text="This refers to data that can identify you personally, such as your name, email address, phone number, physical address, date of birth, PAN, or any other relevant details. Sensitive personal data, such as passwords and financial information, is also included under Personal Information."
+                 FontSize="16"
+                 VerticalOptions="Start"
+                 HorizontalOptions="Start"
+                 LineBreakMode="WordWrap" />
+
+            <Label Text="2. Non-Personal Information" 
+                 FontSize="16"
+                 VerticalOptions="Start"
+                 FontAttributes="Bold"
+                 Padding="0,5,0,3"
+                 HorizontalOptions="Start" />
+
+            <Label Text="This includes data that does not identify you personally, such as session data, web beacons, aggregate information, and other usage data. We use this information to understand user behavior, improve our Services, and tailor content and advertising."
+                 FontSize="16"
+                 VerticalOptions="Start"
+                 HorizontalOptions="Start"
+                 LineBreakMode="WordWrap" />
+
+            <Label Text="3. Cookies and Tracking Technologies" 
+                 FontSize="16"
+                 VerticalOptions="Start"
+                 FontAttributes="Bold"
+                 Padding="0,5,0,3"
+                 HorizontalOptions="Start" />
+
+            <Label Text="We may use cookies or similar technologies to collect data, assign you a unique ID, and analyze user behavior. Cookies cannot read data off your hard drive but may collect information you provide to us. Third-party advertisers may also place cookies when you interact with ads."
+                 FontSize="16"
+                 VerticalOptions="Start"
+                 HorizontalOptions="Start"
+                 LineBreakMode="WordWrap" />
+
+            <Label Text="Use of Information" 
+                 FontSize="18"
+                 FontAttributes="Bold"
+                  Padding="0,10,0,5"
+                 VerticalOptions="Start"
+                 HorizontalOptions="Start" />
+
+            <Label Text="Your Personal Information may be used for purposes including:" 
+                 FontSize="16"
+                 VerticalOptions="Start"
+                 HorizontalOptions="Start" />
+
+            <!-- List of uses -->
+            <HorizontalStackLayout VerticalOptions="Start" HorizontalOptions="Start">
+                <Label Text=" •"
+                FontSize="20"
+            TextColor="Black"/>
+                <Label Text="  Providing and improving our Services;" 
+                FontSize="16" 
+                TextColor="Black"  />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout VerticalOptions="Start" HorizontalOptions="Start">
+                <Label Text=" •"
+                 FontSize="20"
+                 TextColor="Black"/>
+                <Label Text="  Handling your inquiries, complaints, or feedback;" 
+                   FontSize="16" 
+                   TextColor="Black"  />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout VerticalOptions="Start" HorizontalOptions="Start">
+                <Label Text=" •"
+                     FontSize="20"
+                     TextColor="Black"/>
+                <Label Text="  Marketing our products and Services or those of our partners;" 
+                      FontSize="16" 
+                      TextColor="Black"  />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout VerticalOptions="Start" HorizontalOptions="Start">
+                <Label Text=" •"
+         FontSize="20"
+         TextColor="Black"/>
+                <Label Text="  Sending you surveys and promotional material;" 
+          FontSize="16" 
+          TextColor="Black"  />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout VerticalOptions="Start" HorizontalOptions="Start">
+                <Label Text=" •"
+                          FontSize="20"
+                          TextColor="Black"/>
+                <Label Text="  Conducting data analysis to enhance user experience;" 
+                  FontSize="16" 
+                  TextColor="Black"  />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout VerticalOptions="Start" HorizontalOptions="Start">
+                <Label Text=" •"
+                  FontSize="20"
+                  TextColor="Black"/>
+                <Label Text="  Processing payments and managing transactions;" 
+                   FontSize="16" 
+                   TextColor="Black"  />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout VerticalOptions="Start" HorizontalOptions="Start">
+                <Label Text=" •"
+                  FontSize="20"
+                  TextColor="Black"/>
+                <Label Text="  Complying with legal obligations and responding to legal requests." 
+                   FontSize="16" 
+                   TextColor="Black"  />
+            </HorizontalStackLayout>
+            <!-- Continue adding the rest of the privacy policy sections similarly -->
+
+            <Label Text="Disclosure of Information" 
+                 FontSize="18"
+                 FontAttributes="Bold"
+                  Padding="0,10,0,5"
+                 VerticalOptions="Start"
+                 HorizontalOptions="Start" />
+            <Label Text="We do not sell or rent Personal Information. We may disclose Personal Information under these circumstances:"
+                   FontSize="16"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Start" />
+            <HorizontalStackLayout VerticalOptions="Start" HorizontalOptions="Start">
+                <Label Text=" •"
+                     FontSize="20"/>
+                <Label Text="  To affiliates and service providers under strict confidentiality agreements;" 
+                     FontSize="16"  />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout VerticalOptions="Start" HorizontalOptions="Start">
+                <Label Text=" •"
+         FontSize="20"/>
+                <Label Text="  To third-party partners for legitimate marketing or promotional purposes, where you can opt out;" 
+         FontSize="16"  />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout VerticalOptions="Start" HorizontalOptions="Start">
+                <Label Text=" •"
+                     FontSize="20"/>
+                <Label Text="  To comply with legal requirements, such as judicial processes or law enforcement requests;" 
+                     FontSize="16"  />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout VerticalOptions="Start" HorizontalOptions="Start">
+                <Label Text=" •"
+          FontSize="20"/>
+                <Label Text="  To protect our rights, privacy, safety, or property, or that of others." 
+          FontSize="16"  />
+            </HorizontalStackLayout>
+            <Label Text="Third-Party Websites" 
+                   FontSize="18"
+                   FontAttributes="Bold"
+                  Padding="0,10,0,5"  
+                   VerticalOptions="Start"
+                   HorizontalOptions="Start" />
+            <Label Text="Our website may link to external sites governed by their own privacy policies. We recommend reviewing these policies, as we are not responsible for their practices."
+                 FontSize="16"
+                 VerticalOptions="Start"
+                 HorizontalOptions="Start" />
+
+            <Label Text="Data Security and Storage" 
+                   FontSize="18"
+                   FontAttributes="Bold"
+                  Padding="0,10,0,5"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Start" />
+            <Label Text="We use reasonable security measures to protect your data, in compliance with relevant laws. Data may be stored and processed in countries outside your residence but in accordance with applicable laws. We aim to ensure the protection of your data and will require third-party service providers to maintain reasonable security standards."
+                   FontSize="16"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Start" />
+
+            <Label Text="Access, Correction, and Deletion" 
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   VerticalOptions="Start"
+                  Padding="0,10,0,5"
+                   HorizontalOptions="Start" />
+            <HorizontalStackLayout VerticalOptions="Start" HorizontalOptions="Start">
+                <Label Text="You have the right to request access to your data, correct inaccuracies, or request deletion by contacting us at"
+              FontSize="16"
+          TextColor="Black"/>
+                <Label Text=" support@gamanasolutions.com" 
+              FontSize="16" 
+              TextColor="Blue"  />
+                <Label Text=" Note that deletion of certain data may impact your use of our Services." 
+                      FontSize="16" 
+                      TextColor="Black"  />
+            </HorizontalStackLayout>
+
+
+            <Label Text="Contact Information" 
+                   FontSize="18"
+                   FontAttributes="Bold"
+                  Padding="0,10,0,5"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Start" />
+            <HorizontalStackLayout VerticalOptions="Start" HorizontalOptions="Start">
+                <Label Text="For questions or concerns, please contact us at "
+                         FontSize="16"
+                     TextColor="Black"/>
+                <Label Text=" support@gamanasolutions.com" 
+                         FontSize="16" 
+                         TextColor="Blue"  />
+                <Label Text=" Mob: +91 9731727249" 
+          FontSize="16" 
+          TextColor="Blue"  />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
