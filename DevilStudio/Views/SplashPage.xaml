@@ -4,7 +4,7 @@
              x:Class="DevilStudio.Views.SplashPage">
 
     <StackLayout Margin="20">
-        <Image Source="devilstudio_logo.png" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+      
         <Label Text="Devil Studio (Beta Release )" HorizontalOptions="Center" FontSize="Small" VerticalOptions="End" TextColor="Gray"/>
         <Label x:Name="BuildVersionLabel" Text="Version: Loading..." HorizontalOptions="Center" FontSize="Small" VerticalOptions="End" TextColor="Gray"/>
         <Label Text="Copyright © 2024 Gamana Solutions." HorizontalOptions="Center" FontSize="Small" VerticalOptions="End" TextColor="Gray"/>

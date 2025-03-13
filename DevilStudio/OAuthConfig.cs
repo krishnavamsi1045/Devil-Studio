@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Diagnostics;
+using System.IO;
 using Newtonsoft.Json.Linq;
 
 namespace DevilStudio
@@ -9,12 +10,22 @@ namespace DevilStudio
 
         static OAuthConfig()
         {
-            string configFilePath = Path.Combine(AppContext.BaseDirectory, "oauthconfig.json");
-            if (!File.Exists(configFilePath))
-            {
-                throw new FileNotFoundException($"Could not find file '{configFilePath}'");
+            string fileName = "oauthconfig.json";
+            DirectoryInfo directory = new DirectoryInfo(AppContext.BaseDirectory);
+            while(directory != null && !File.Exists(Path.Combine(directory.FullName, fileName))) {
+                directory = directory.Parent;
+                if(directory != null)
+                {
+                    Debug.WriteLine(directory.FullName);
+                }
             }
-            string json = File.ReadAllText(configFilePath);
+
+            string oAuthConfigFilePath = Path.Combine(directory.FullName, fileName);
+            if (!File.Exists(oAuthConfigFilePath))
+            {
+                throw new FileNotFoundException($"Could not find file '{oAuthConfigFilePath}'");
+            }
+            string json = File.ReadAllText(oAuthConfigFilePath);
             Config = JObject.Parse(json);
         }
 

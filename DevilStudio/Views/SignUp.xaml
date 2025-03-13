@@ -40,12 +40,7 @@
 
                 <!-- Left side: Content about the application -->
                 <Grid Grid.Column="0"  Margin="0,100,0,0" BackgroundColor="AliceBlue">
-                    <Image Source="devilstudio_logo.png"
-                       Aspect="AspectFit"
-                       Opacity="0.3" 
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"
-                       Margin="0,0,0,10" />
+                   
                     <VerticalStackLayout Padding="20"
                                      VerticalOptions="Start" Margin="0,30,0,0">
                         <Label Text="Welcome to Devil Studio!"

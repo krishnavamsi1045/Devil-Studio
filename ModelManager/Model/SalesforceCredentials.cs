@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using Newtonsoft.Json;
 
@@ -15,17 +16,29 @@ namespace ModelManager.Model
         // Static method to load Salesforce credentials from JSON
         public static SalesforceCredentials Load()
         {
-            string jsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "SalesforceCredentials.json");
-            Console.WriteLine($"Looking for Salesforce credentials file at: {jsonFilePath}");
-
-            if (System.IO.File.Exists(jsonFilePath))
+            DirectoryInfo directory = new DirectoryInfo(AppContext.BaseDirectory);
+            string fileName = "salesforcecredentials.json";
+            while (directory != null && !File.Exists(Path.Combine(directory.FullName, fileName)))
             {
-                var json = System.IO.File.ReadAllText(jsonFilePath);
+
+                directory = directory.Parent;
+                if (directory != null)
+                {
+                    Debug.WriteLine(directory.FullName);
+                }
+            }
+            var salesforceCredentialsPath = Path.Combine(directory.FullName, fileName);
+           
+            Debug.WriteLine($"Looking for Salesforce credentials file at: {salesforceCredentialsPath}");
+
+            if (System.IO.File.Exists(salesforceCredentialsPath))
+            {
+                var json = System.IO.File.ReadAllText(salesforceCredentialsPath);
                 return JsonConvert.DeserializeObject<SalesforceCredentials>(json);
             }
             else
             {
-                throw new FileNotFoundException($"Salesforce credentials file not found at: {jsonFilePath}");
+                throw new FileNotFoundException($"Salesforce credentials file not found at: {salesforceCredentialsPath}");
             }
         }
     }
